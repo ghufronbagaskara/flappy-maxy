@@ -79,6 +79,18 @@ body {
   padding: 30px 28px;
 }
 
+.landing-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.landing-logo {
+  width: min(100%, 248px);
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(0, 229, 255, 0.35));
+}
+
 .landing-tagline {
   margin: 0;
   color: var(--color-accent-cyan);
