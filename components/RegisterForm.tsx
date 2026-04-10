@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
   useCallback,
@@ -117,8 +118,18 @@ export default function RegisterForm() {
 
       <div className="landing-card-wrap">
         <div className="landing-card neon-panel">
+          <div className="landing-logo-wrap animate-title-main">
+            <Image
+              src="/assets/flappy-maxy-logo.png"
+              alt="Flappy Maxy logo"
+              width={280}
+              height={280}
+              className="landing-logo"
+              priority
+            />
+          </div>
           <p className="landing-tagline animate-title-sub">
-            MAXY Academy Technical Test
+            MAXY Academy Test
           </p>
           <h1 className="landing-title animate-title-main">Flappy Maxy</h1>
           <p className="landing-subtitle animate-title-sub">
