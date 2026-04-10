@@ -14,10 +14,23 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+const appBaseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(appBaseUrl),
   title: "Flappy Maxy | MAXY Academy",
   description:
     "Flappy Bird technical test with automated score email delivery via Resend.",
+  openGraph: {
+    images: [
+      {
+        url: "/assets/flappy-maxy-logo.png",
+        width: 1200,
+        height: 1200,
+        alt: "Flappy Maxy logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +42,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${orbitron.variable} ${dmSans.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full">{children}</body>
     </html>
