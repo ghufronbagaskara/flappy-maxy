@@ -42,6 +42,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${orbitron.variable} ${dmSans.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full">{children}</body>
     </html>
